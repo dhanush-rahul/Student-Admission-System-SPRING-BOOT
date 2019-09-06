@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Student Login</title>
 </head>
 <body>
 <div id="form-wrapper" style="max-width: 500px; margin: auto;">

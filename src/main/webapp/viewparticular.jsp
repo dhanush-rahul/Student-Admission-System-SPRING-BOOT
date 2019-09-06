@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Student Form</title>
 </head>
 <body>
 <%Applications applicationbean = (Applications) request.getAttribute("application"); 

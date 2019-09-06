@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>College Admin Functionalities</title>
 </head>
 <body>
 <%Colleges college =(Colleges) session.getAttribute("college"); 

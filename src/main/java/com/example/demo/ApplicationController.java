@@ -53,13 +53,11 @@ public class ApplicationController {
         studentbean.setPassword(applications.getPassword());
         studentbean.setStatus(applications.getStatus());
         studentbean.setCounter(1);
-        System.out.println(studentbean);
         
         String url1="http://localhost:"+port+"/applicationresource/addstudentlogin";
 		RestTemplate rt1=new RestTemplate();
         String status1=rt1.postForObject(url1, studentbean, String.class);
 		
-		System.out.println(applications);
 		
 		String url="http://localhost:"+port+"/applicationresource/addapplication";
 		RestTemplate rt=new RestTemplate();

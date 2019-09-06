@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Student Registration</title>
 </head>
 <body>
 <%
@@ -13,7 +13,7 @@ int count=0;
 %>
 <form action="register" method="post">
 		<div id="form-wrapper" style="max-width: 500px; margin: auto;">
-			<table align="center">
+			<table>
 				<tr>
 					<td>Enter Name of the Applicant*:</td>
 					<td><input type="text" name="studentUsername" required="required"></td>

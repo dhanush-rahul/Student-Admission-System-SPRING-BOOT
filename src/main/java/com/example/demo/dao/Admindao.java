@@ -28,7 +28,6 @@ public class Admindao {
 		// TODO Auto-generated method stub
 		Login login1 = loginrepo.findById(login.getAdminusername()).orElse(new Login());
 		
-		
         if(login1.getAdminpassword().equals(login.getAdminpassword()))
 		return login1.getCollegeCode();
         return null;
