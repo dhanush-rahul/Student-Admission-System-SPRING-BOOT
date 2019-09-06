@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Selected College Applications</title>
 </head>
 <body>
 <table border="1">

@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Rejected!</title>
 </head>
 <body>
 <h1>Sorry! You have been rejected!!</h1>

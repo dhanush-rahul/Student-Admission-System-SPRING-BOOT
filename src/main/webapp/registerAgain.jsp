@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Register Again</title>
 </head>
 <body>
 <%Applications applicationbean = (Applications) session.getAttribute("application"); 

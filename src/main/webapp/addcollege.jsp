@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Add College and Admin</title>
 </head>
 <body>
 <form method=post action="addcollege">

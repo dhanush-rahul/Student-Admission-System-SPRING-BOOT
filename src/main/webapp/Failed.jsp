@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Task Failed!</title>
 </head>
 <body>
 <h1>Task Failed!</h1>
