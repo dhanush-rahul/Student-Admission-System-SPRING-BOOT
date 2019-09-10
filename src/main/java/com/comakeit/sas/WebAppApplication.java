@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.comakeit.sas;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -7,9 +7,9 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @SpringBootApplication
-@ComponentScan(basePackages = {"com.example.demo", "com.example.demo.dao", "com.example.demo.restcontroller" })
-@EntityScan(basePackages = {"com.example.demo.bean"})
-@EnableJpaRepositories(basePackages = {"com.example.demo.repository"})
+@ComponentScan(basePackages = {"com.comakeit.sas", "com.comakeit.sas.dao", "com.comakeit.sas.restcontroller" })
+@EntityScan(basePackages = {"com.comakeit.sas.bean"})
+@EnableJpaRepositories(basePackages = {"com.comakeit.sas.repository"})
 public class WebAppApplication {
 
 	public static void main(String[] args) {

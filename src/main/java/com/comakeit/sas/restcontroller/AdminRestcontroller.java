@@ -1,4 +1,4 @@
-package com.example.demo.restcontroller;
+package com.comakeit.sas.restcontroller;
 
 
 
@@ -11,13 +11,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.demo.bean.Applications;
-import com.example.demo.bean.Colleges;
-import com.example.demo.bean.Login;
-import com.example.demo.dao.Admindao;
-import com.example.demo.repository.ApplicationRepository;
-import com.example.demo.repository.CollegeRepository;
-import com.example.demo.repository.LoginRepository;
+import com.comakeit.sas.bean.Applications;
+import com.comakeit.sas.bean.Colleges;
+import com.comakeit.sas.bean.Login;
+import com.comakeit.sas.dao.Admindao;
+import com.comakeit.sas.repository.ApplicationRepository;
+import com.comakeit.sas.repository.CollegeRepository;
+import com.comakeit.sas.repository.LoginRepository;
 
 @RestController
 @RequestMapping("/adminresource")

@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.comakeit.sas;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -23,16 +23,15 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.example.demo.bean.Applications;
-import com.example.demo.bean.Colleges;
-import com.example.demo.bean.SelectedStudents;
-import com.example.demo.bean.StudentLogin;
+import com.comakeit.sas.bean.Applications;
+import com.comakeit.sas.bean.Colleges;
+import com.comakeit.sas.bean.SelectedStudents;
+import com.comakeit.sas.bean.StudentLogin;
 
 @Controller
 public class CollegeAdminController {
 	@Autowired
 	Environment environment;
-
 
 
 	@RequestMapping("/collegeAdminFunc")
@@ -51,7 +50,8 @@ public class CollegeAdminController {
 			HttpEntity<Applications> requestEntity = new HttpEntity<>(applicationbean, requestHeaders);
 			RestTemplate rest = new RestTemplate();
 			ModelAndView modelAndView = new ModelAndView();
-			ResponseEntity<ArrayList<Applications>> responseEntity = rest.exchange("http://localhost:"+port+"/collegeadminresource/collegeapplications",
+			ResponseEntity<ArrayList<Applications>> responseEntity = 
+					rest.exchange("http://localhost:"+port+"/collegeadminresource/collegeapplications",
 					HttpMethod.POST,
 					requestEntity, new ParameterizedTypeReference<ArrayList<Applications>>() {
 					});
@@ -118,8 +118,8 @@ public class CollegeAdminController {
 			selectedbean.setSchoolName(application.getSchoolName());
 			selectedbean.setDepartment(application.getDepartment());
 			String url2="http://localhost:"+port+"/collegeadminresource/insertintoselected";
-			RestTemplate rt2=new RestTemplate();
-			String status2=rt2.postForObject(url2, selectedbean, String.class);
+			RestTemplate rest=new RestTemplate();
+			String status2=rest.postForObject(url2, selectedbean, String.class);
 			
 			if(status1.equals("yes") && status2.equals("yes"))
 				return "Successfullpage.jsp";
@@ -129,8 +129,8 @@ public class CollegeAdminController {
 		{
 			Applications application = (Applications) session.getAttribute("applicationbean");
 			String url2="http://localhost:"+port+"/collegeadminresource/getCounter";
-			RestTemplate rt2=new RestTemplate();
-			int counter=rt2.postForObject(url2, application, Integer.class);
+			RestTemplate rest=new RestTemplate();
+			int counter=rest.postForObject(url2, application, Integer.class);
 			System.out.println(counter);
 			if(counter<2)
 			{
@@ -139,12 +139,12 @@ public class CollegeAdminController {
 				studentbean.setCounter(counter+1);
 				studentbean.setStatus("FirstLevel");
 				String url3="http://localhost:"+port+"/collegeadminresource/updatestudentlogin";
-				RestTemplate rt3=new RestTemplate();
-				String status1 = rt3.postForObject(url3, studentbean, String.class);
+				RestTemplate rest2=new RestTemplate();
+				String status1 = rest2.postForObject(url3, studentbean, String.class);
 				
 				String url4="http://localhost:"+port+"/collegeadminresource/updateApplicationFirstLevel";
-				RestTemplate rt4=new RestTemplate();
-				String status2 = rt4.postForObject(url4, application, String.class);
+				RestTemplate rest3=new RestTemplate();
+				String status2 = rest3.postForObject(url4, application, String.class);
 				if(status1.equals("yes") && status2.equals("yes"))
 					return "Successfullpage.jsp";
 			}
@@ -153,12 +153,12 @@ public class CollegeAdminController {
 				StudentLogin studentbean = new StudentLogin();
 				studentbean.setStudentUsername(application.getStudentUsername());
 				String url3="http://localhost:"+port+"/collegeadminresource/updaterejectedstudent";
-				RestTemplate rt3=new RestTemplate();
-				String status1 = rt3.postForObject(url3, studentbean, String.class);
+				RestTemplate rest2=new RestTemplate();
+				String status1 = rest2.postForObject(url3, studentbean, String.class);
 				
 				String url4="http://localhost:"+port+"/collegeadminresource/updaterejectedapplication";
-				RestTemplate rt4=new RestTemplate();
-				String status2 = rt4.postForObject(url4, application, String.class);
+				RestTemplate rest3=new RestTemplate();
+				String status2 = rest3.postForObject(url4, application, String.class);
 				if(status1.equals("yes") && status2.equals("yes"))
 					return "Successfullpage.jsp";
 			}

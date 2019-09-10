@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.comakeit.sas;
 
 import java.util.List;
 
@@ -15,9 +15,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.client.RestTemplate;
 
-import com.example.demo.bean.Applications;
-import com.example.demo.bean.Colleges;
-import com.example.demo.bean.StudentLogin;
+import com.comakeit.sas.bean.Applications;
+import com.comakeit.sas.bean.Colleges;
+import com.comakeit.sas.bean.StudentLogin;
 
 @Controller
 public class StudentLoginController {

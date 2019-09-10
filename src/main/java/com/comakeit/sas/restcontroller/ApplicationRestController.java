@@ -1,4 +1,4 @@
-package com.example.demo.restcontroller;
+package com.comakeit.sas.restcontroller;
 
 import java.util.ArrayList;
 
@@ -8,13 +8,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.demo.bean.Applications;
-import com.example.demo.bean.Colleges;
-import com.example.demo.bean.StudentLogin;
-import com.example.demo.dao.Applicationdao;
-import com.example.demo.repository.ApplicationRepository;
-import com.example.demo.repository.CollegeRepository;
-import com.example.demo.repository.StudentRepository;
+import com.comakeit.sas.bean.Applications;
+import com.comakeit.sas.bean.Colleges;
+import com.comakeit.sas.bean.StudentLogin;
+import com.comakeit.sas.dao.Applicationdao;
+import com.comakeit.sas.repository.ApplicationRepository;
+import com.comakeit.sas.repository.CollegeRepository;
+import com.comakeit.sas.repository.StudentRepository;
 
 @RestController
 @RequestMapping("/applicationresource")

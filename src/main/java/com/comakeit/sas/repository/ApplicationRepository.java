@@ -1,4 +1,4 @@
-package com.example.demo.repository;
+package com.comakeit.sas.repository;
 
 import java.util.List;
 
@@ -7,7 +7,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
-import com.example.demo.bean.Applications;
+import com.comakeit.sas.bean.Applications;
 @Repository
 public interface ApplicationRepository extends JpaRepository<Applications, String> {
 	

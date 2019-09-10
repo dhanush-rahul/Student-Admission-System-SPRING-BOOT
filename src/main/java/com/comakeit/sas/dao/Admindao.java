@@ -1,16 +1,16 @@
-package com.example.demo.dao;
+package com.comakeit.sas.dao;
 
 import java.util.ArrayList;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.example.demo.bean.Applications;
-import com.example.demo.bean.Colleges;
-import com.example.demo.bean.Login;
-import com.example.demo.repository.ApplicationRepository;
-import com.example.demo.repository.CollegeRepository;
-import com.example.demo.repository.LoginRepository;
+import com.comakeit.sas.bean.Applications;
+import com.comakeit.sas.bean.Colleges;
+import com.comakeit.sas.bean.Login;
+import com.comakeit.sas.repository.ApplicationRepository;
+import com.comakeit.sas.repository.CollegeRepository;
+import com.comakeit.sas.repository.LoginRepository;
 
 @Service
 public class Admindao {
@@ -26,10 +26,10 @@ public class Admindao {
 	
 	public Colleges getCollegecode(Login login) {
 		// TODO Auto-generated method stub
-		Login login1 = loginrepo.findById(login.getAdminusername()).orElse(new Login());
+		Login loginbean = loginrepo.findById(login.getAdminusername()).orElse(new Login());
 		
-        if(login1.getAdminpassword().equals(login.getAdminpassword()))
-		return login1.getCollegeCode();
+        if(loginbean.getAdminpassword().equals(login.getAdminpassword()))
+		return loginbean.getCollegeCode();
         return null;
 	}
 

@@ -1,4 +1,4 @@
-package com.example.demo.dao;
+package com.comakeit.sas.dao;
 
 import java.util.ArrayList;
 import java.util.Optional;
@@ -8,14 +8,14 @@ import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
-import com.example.demo.bean.Applications;
-import com.example.demo.bean.Colleges;
-import com.example.demo.bean.SelectedStudents;
-import com.example.demo.bean.StudentLogin;
-import com.example.demo.repository.ApplicationRepository;
-import com.example.demo.repository.CollegeRepository;
-import com.example.demo.repository.SelectedRepository;
-import com.example.demo.repository.StudentRepository;
+import com.comakeit.sas.bean.Applications;
+import com.comakeit.sas.bean.Colleges;
+import com.comakeit.sas.bean.SelectedStudents;
+import com.comakeit.sas.bean.StudentLogin;
+import com.comakeit.sas.repository.ApplicationRepository;
+import com.comakeit.sas.repository.CollegeRepository;
+import com.comakeit.sas.repository.SelectedRepository;
+import com.comakeit.sas.repository.StudentRepository;
 
 
 @Service
