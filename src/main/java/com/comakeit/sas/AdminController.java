@@ -40,7 +40,7 @@ public class AdminController {
         Colleges status=rt.postForObject(url, login, Colleges.class);
         session.setAttribute("college", status);
         if(status==null)
-        	return "home.jsp";
+        	return "Failed.jsp";
 		if(status.getCollegeName().equals("Admin"))
 			return "admin.jsp";
 		else
