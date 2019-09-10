@@ -26,10 +26,13 @@ public class Admindao {
 	
 	public Colleges getCollegecode(Login login) {
 		// TODO Auto-generated method stub
-		Login loginbean = loginrepo.findById(login.getAdminusername()).orElse(new Login());
+		if(loginrepo.findById(login.getAdminusername()).isPresent())
+		{
+		Login loginbean = loginrepo.findById(login.getAdminusername()).get();
 		
         if(loginbean.getAdminpassword().equals(login.getAdminpassword()))
 		return loginbean.getCollegeCode();
+		}
         return null;
 	}
 
