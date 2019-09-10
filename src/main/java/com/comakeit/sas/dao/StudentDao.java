@@ -1,12 +1,12 @@
-package com.example.demo.dao;
+package com.comakeit.sas.dao;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.example.demo.bean.Applications;
-import com.example.demo.bean.StudentLogin;
-import com.example.demo.repository.ApplicationRepository;
-import com.example.demo.repository.StudentRepository;
+import com.comakeit.sas.bean.Applications;
+import com.comakeit.sas.bean.StudentLogin;
+import com.comakeit.sas.repository.ApplicationRepository;
+import com.comakeit.sas.repository.StudentRepository;
 
 @Service
 public class StudentDao {

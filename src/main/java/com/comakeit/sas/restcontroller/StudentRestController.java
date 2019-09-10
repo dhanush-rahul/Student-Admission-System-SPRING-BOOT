@@ -1,13 +1,13 @@
-package com.example.demo.restcontroller;
+package com.comakeit.sas.restcontroller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.demo.bean.Applications;
-import com.example.demo.bean.StudentLogin;
-import com.example.demo.dao.StudentDao;
+import com.comakeit.sas.bean.Applications;
+import com.comakeit.sas.bean.StudentLogin;
+import com.comakeit.sas.dao.StudentDao;
 
 @RestController
 @RequestMapping("/studentresource")

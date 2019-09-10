@@ -1,4 +1,4 @@
-package com.example.demo.repository;
+package com.comakeit.sas.repository;
 
 import java.util.ArrayList;
 
@@ -6,7 +6,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
-import com.example.demo.bean.SelectedStudents;
+import com.comakeit.sas.bean.SelectedStudents;
 
 public interface SelectedRepository extends JpaRepository<SelectedStudents, String> {
 

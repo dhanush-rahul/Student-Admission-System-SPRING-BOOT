@@ -1,4 +1,4 @@
-package com.example.demo.bean;
+package com.comakeit.sas.bean;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;

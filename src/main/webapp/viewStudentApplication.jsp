@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8" import="com.example.demo.bean.*"%>
+    pageEncoding="UTF-8" import="com.comakeit.sas.bean.*"%>
 <!DOCTYPE html>
 <html>
 <head>
