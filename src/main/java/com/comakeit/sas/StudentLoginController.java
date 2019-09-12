@@ -38,12 +38,11 @@ public class StudentLoginController {
 		RestTemplate rt=new RestTemplate();
         String status=rt.postForObject(url, studentbean, String.class);
         session.setAttribute("status", status);
-        
+
         String url1="http://localhost:"+port+"/studentresource/getApplication";
 		RestTemplate rt1=new RestTemplate();
         Applications application1=rt1.postForObject(url1, studentbean, Applications.class);
         session.setAttribute("application",application1);
-        
         if(status==null)
         	return "studentlogin.jsp";
 		if(status.equals("Pending"))
@@ -62,6 +61,8 @@ public class StudentLoginController {
 		}
 		else if(status.equals("Rejected"))
 			return "Rejected.jsp";
+		else if(status.equals("Selected"))
+			return "viewStudentApplication.jsp";
 		return "studentlogin.jsp";
 	}
 	

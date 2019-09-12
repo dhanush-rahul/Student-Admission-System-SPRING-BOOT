@@ -10,8 +10,7 @@
 
 	<a href="addcollege.jsp"><input type="button" value="Add College"></a>
 	<a href="ViewAdmins"><input type="button" value="View Admin"></a>
-	<a href="ViewApplications"><input type="button"
-		value="View all applications"></a>
-
+	<a href="ViewApplications"><input type="button" value="View all applications"></a>
+	<a href="logout.jsp"><input type="button" value="Logout"></a>
 </body>
 </html>

@@ -13,7 +13,7 @@ public interface StudentRepository extends JpaRepository<StudentLogin, String> {
 	@Query("select c.counter from StudentLogin c where c.studentUsername=:studentUsername")
 	int getCount(@Param("studentUsername") String studentUsername);
 
-	@Query("select c.status from StudentLogin c where c.studentUsername=:studentUsername and c.password=:password")
+	@Query("select c.status from StudentLogin c where c.studentUsername= :studentUsername and c.password= :password")
 	String getStatus(@Param("studentUsername") String studentUsername,@Param("password") String password);
 
 }

@@ -37,5 +37,7 @@ for(Applications applications : list)
 	</tr>		
 		<%} %>			
 					</table>
+						<a href="collegeadmin.jsp"><input type="button" value="Back"></a>
+					
 </body>
 </html>

@@ -36,7 +36,7 @@ Choose another college to re-register and click register.</h3></tr>
 					</select>
 				</tr>
 				<tr>
-					<td>Choose department*</td>
+					<td>Choose department</td>
 					<td><select name="dept_choice">
 							<option value="CSE">CSE</option>
 							<option value="ECE">ECE</option>
@@ -48,5 +48,6 @@ Choose another college to re-register and click register.</h3></tr>
 
 <tr><td><input type="submit" value="Register again"></a></td></tr>
 </table>
+<a href="studentlogin.jsp"><input type="button" value="Back"></a>
 </body>
 </html>
