@@ -8,5 +8,6 @@
 </head>
 <body>
 <h1>SUCCESS</h1>
+<a href="home.jsp">Back</a>
 </body>
 </html>

@@ -43,9 +43,12 @@ public class CollegeAdminDao {
 	}
 
 	public String updateApplication(Applications applicationbean) {
-		Applications application = applicationrepo.findById(applicationbean.getStudentUsername()).orElse(new Applications());
+		Applications application = applicationrepo.findById(applicationbean.getStudentUsername()).get();
 		application.setStatus("Selected");
 		applicationrepo.save(application);
+		StudentLogin studentbean = studentrepo.findById(applicationbean.getStudentUsername()).get();
+		studentbean.setStatus("Selected");
+		studentrepo.save(studentbean);
 		return "yes";
 	}
 

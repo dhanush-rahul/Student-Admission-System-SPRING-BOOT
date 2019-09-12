@@ -17,7 +17,7 @@ out.println(college.getCollegeName()); out.println(college.getCollegeCode());
 <input type="radio" name="adminfunc" value="3" required>View Selected Students department wise<br>
 
 <input type="submit" value="submit">
-<a href = "login.jsp"><input type="button" value="Logout"></a>
+<a href = "logout.jsp"><input type="button" value="Logout"></a>
 </form>
 </body>
 </html>

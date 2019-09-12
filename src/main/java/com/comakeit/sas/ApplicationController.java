@@ -31,14 +31,14 @@ public class ApplicationController {
 	{	String port = environment.getProperty("local.server.port");
 
 		RestTemplate rest = new RestTemplate();
-		ModelAndView mv = new ModelAndView();
+		ModelAndView modelview = new ModelAndView();
 		ResponseEntity<List<Colleges>> responseEntity = rest.exchange("http://localhost:"+port+"/applicationresource/getcolleges",
 				HttpMethod.GET,
 				null, new ParameterizedTypeReference<List<Colleges>>() {
 				});
-		mv.addObject("colleges", responseEntity.getBody());
-		mv.setViewName("studentregistration.jsp");
-		return mv;
+		modelview.addObject("colleges", responseEntity.getBody());
+		modelview.setViewName("studentregistration.jsp");
+		return modelview;
 	}
 	
 	@RequestMapping("/register")

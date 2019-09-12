@@ -17,7 +17,9 @@ public class StudentDao {
 
 	public String getStatus(StudentLogin studentbean) {
 		// TODO Auto-generated method stub
+		System.out.println(studentbean);
 		String status = studentrepo.getStatus(studentbean.getStudentUsername(),studentbean.getPassword());
+		System.out.println(status);
 		if(status!=null)
 		return status;
 		return null;
